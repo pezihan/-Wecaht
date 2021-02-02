@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="./css/iconfont.css">
+        <!--the css for jquery.mCustomScrollbar-->
+        <link rel="stylesheet" href="./lib/jquery-mCustomScrollbar/css/jquery.mCustomScrollbar.min.css"/>
+        <!--the css for this plugin-->
+        <link rel="stylesheet" href="./lib/jquery-emoji/css/jquery.emoji.css"/>
+        <link rel="stylesheet" href="./css/index.css">
+    </head>
+    <body>
+        <div class="background"><img src="./images/background.png" alt=""></div>
+        <div class="login_box">
+            <div class="login_box_img">
+                <h3>用户登录</h3>
+                <p>用户名</p>
+                <input type="text" maxlength="12" placeholder="请输入用户名" id="username">
+                <p>请选择头像</p>
+                <ul class="avatar" id="login_avatar">
+                    <li class="now"><img src="./images/1.png" alt=""></li>
+                    <li><img src="./images/2.png" alt=""></li>
+                    <li><img src="./images/3.png" alt=""></li>
+                    <li><img src="./images/4.png" alt=""></li>
+                    <li><img src="./images/5.png" alt=""></li>
+                    <li><img src="./images/6.png" alt=""></li>
+                    <li><img src="./images/7.png" alt=""></li>
+                    <li><img src="./images/8.png" alt=""></li>
+                    <li><img src="./images/9.png" alt=""></li>
+                    <li><img src="./images/10.png" alt=""></li>
+                </ul>
+                <button class="weui-btn" id="loginBtn">登录</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="user-list">
+                <div class="header">
+                    <div class="avatar">
+                        <img class="img avatar_url" src="./images/8.png" alt="">
+                    </div>
+                    <div class="info"><h3 class="username">清流</h3></div>
+                </div>
+                <div class="title"><h3>用户列表</h3></div>
+                <ul>
+                    <!-- <li class="user">
+                        <div class="avatar"><img src="./images/7.png" alt=""></div>
+                        <div class="name">刘小编</div>
+                    </li> -->
+                </ul>
+            </div>
+            <!-- 聊天窗口 -->
+            <div class="box">
+                <!-- 聊天窗口头部 -->
+                <div class="box-hd"><h3>聊天室(<span id="userCount">99</span>)</h3></div>
+                <!-- 聊天窗口主体区域 -->
+                <div class="box-bd">
+                    
+                    <!-- <div class="system">
+                        <p class="message_system">
+                            <span class="content">某人邀请加入群聊</span>
+                        </p>
+                    </div> -->
+                    
+                    <!-- 自己的消息 -->
+                    <!-- <div class="message-box">
+                        <div class="my message">
+                            <img class="avatar" src="./images/7.png" alt="">
+                            <div class="content">
+                                <div class="bubble">
+                                    <div class="bubble_cont">在dasda dadad a 打到按时啊阿达的的按时打算阿达按时打算阿诗丹顿阿萨德阿萨德矮的按时大萨达按时奥德2213赛啊按时矮的阿萨德啊撒干嘛</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- 别人的消息 -->
+                    <!-- <div class="message-box">
+                        <div class="other message">
+                            <img class="avatar" src="./images/8.png" alt="">
+                            <div class="content">
+                                <div class="nickname">小妹</div>
+                                <div class="bubble">
+                                    <div class="bubble_cont">在dasda dadad a 打到按时啊阿达的的按时打算阿达按时打算阿诗丹顿阿萨德阿萨德矮的按时大萨达按时奥德2213赛啊按时矮的阿萨德啊撒干嘛</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                </div>
+
+                <!-- 聊天窗口底部区域 -->
+                <div class="box-ft">
+                    <!-- 工具栏 -->
+                    <div class="toolbar">
+                        <a href="javascript:;" title="表情" class="face iconfont icon-biaoqing-xue"></a>
+                        <a href="javascript:;" title="截屏" class="screen-cut iconfont icon-jiandaojianqie"></a>
+                        <a href="javascript:;" title="图片" class="file iconfont icon-tupian">
+                            <label for="file"></label>
+                            <input type="file" accept="image/png,image/jpeg,image/gif" id="file" style="display: none">
+                        </a>
+                    </div>
+                    <!-- 内容输入区域 -->
+                    <div class="content">
+                        <!-- div 添加一个属性 ：contenteditable  -->
+                        <div class="text" id="content" contenteditable></div>
+                    </、div>
+                    <!-- 发送按钮 -->
+                    <div class="action">
+                        <span class="desc">按下Ctrl+Enter发送</span>
+                        <a class="btn-send" id="btn-send" href="javascript:;">发送</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 引入socket.io -->
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="./js/jQuery-3.4.1.js"></script>
+        <!--the js for jquery.mCustomScrollbar-->
+        <script src="./lib/jquery-mCustomScrollbar/script/jquery.mCustomScrollbar.min.js"></script>
+        <!--the js for this plugin-->
+        <script src="./lib/jquery-emoji/js/jquery.emoji.min.js"></script>
+        <script src="./js/index.js"></script>
+    </body>
+</html>
